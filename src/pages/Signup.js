@@ -5,8 +5,8 @@ import signupImg from '../assets/signup.png'
 const Signup = ({setIsLoggedIn}) => {
   return (
     <Template
-    title="Join the millons learning to code with StudyNotiom for free"
-    desc1="Build skills for today. tomorrow, amd beyond"
+    title="Join the millons learning to code with StudyNotiom for free."
+    desc1="Build skills for today. tomorrow, amd beyond."
     desc2="Education to future-proof your career"
     image={signupImg}
     formtype="signup"

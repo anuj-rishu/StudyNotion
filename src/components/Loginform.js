@@ -24,12 +24,13 @@ const Loginform = ({setIsLoggedIn }) => {
     navigate("/dashboard")
   }
   return (
-    <form onSubmit={submitHandler} >
-<label>
-    <p>
-        Email Address <sup>*</sup>
+    <form className='flex flex-col w-full gap-y-4 mt-6 ' onSubmit={submitHandler} >
+<label className=' w-full' >
+    <p className=' text-[0.875rem] text-white mb-1 leading-[1.375rem] '>
+        Email Address <sup className='text-pink-700'>*</sup>
     </p>
     <input 
+    className= ' border-gray-600  bg-slate-500 rounded-[0.5rem] text-yellow-50 w-full p-[12px]   '
     required
     type="email"
      name="email"
@@ -40,31 +41,39 @@ const Loginform = ({setIsLoggedIn }) => {
       />
 </label>
 
-<label>
-    <p>
-        Password <sup>*</sup>
+<label className=' w-full relative'>
+    <p className=' text-[0.875rem] text-white mb-1 leading-[1.375rem] '>
+        Password  <sup className='text-pink-700'>*</sup>
     </p>
     <input 
+    className= ' border-gray-600  bg-slate-500 rounded-[0.5rem] text-yellow-50 w-full p-[12px]   '
     required
     type={showPassword ? ("text") : ("password")}
-     name="password"
+     name=" password"
       
       value={formData.password}
       onChange={changeHandler}
-      placeholder='password'
+      placeholder=' Enter password'
       />
 
-      <span onClick={()=> setshowPassword((prev)=> !prev)}>
-        {showPassword ?(<AiOutlineEyeInvisible />):(<AiOutlineEye />)}
+      <span className=' absolute  right-3 top-[38px] cursor-pointer '
+       onClick={()=> setshowPassword((prev)=> !prev)}>
+        {showPassword ?(<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF' />):(<AiOutlineEye fontSize={24} fill='#AFB2BF'  />)}
       </span>
-      <Link to="#">
-      <p>Forget Password</p>
+      <Link to="#"
+      
+      >
+      <p  className=' text-xs mt-2  text-blue-500 max-w-max ml-auto'>Forget Password</p>
       </Link>
 </label>
 
-<button  >
+<button className=' bg-yellow-300 rounded-[8px] font-medium text-black px-[12px] py-[8px] mt-6'  >
     Sign In
 </button>
+
+
+
+
   </form>
   )
 }

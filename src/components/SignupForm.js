@@ -39,21 +39,22 @@ navigate("/dashboard")
   return (
  <div>
 
-  <div>
-  <button>
+  <div className='flex bg-slate-800 p-1 gap-x-1 my-6 rounded-full max-w-max '>
+  <button className=''>
       Student
-    </button>
-    <button>
+    </button >
+    <button className=''>
       Instructor
     </button>
   </div>
     
     <form onSubmit={submitHandler}>
      
-
-      <label>
-        <p>First Name <sup>*</sup></p>
+<div className=' flex gap-x-4 mt-4' >
+      <label className='w-full'>
+        <p className=' text-[0.875rem] text-white mb-1 leading-[1.375rem] ' >First Name <sup className='text-pink-700'>*</sup></p>
         <input
+         className= ' border-gray-600  bg-slate-500 rounded-[0.5rem] text-yellow-50 w-full p-[12px]   '
         required
         type='text'
         name='firstName'
@@ -62,9 +63,10 @@ navigate("/dashboard")
         value={formdata.firstName}
         />
       </label>
-      <label>
-        <p>Last Name <sup>*</sup></p>
+      <label className='w-full'>
+        <p className=' text-[0.875rem] text-white mb-1 leading-[1.375rem] '>Last Name <sup className='text-pink-700'>*</sup></p>
         <input
+         className= ' border-gray-600  bg-slate-500 rounded-[0.5rem] text-yellow-50 w-full p-[12px]   '
         required
         type='text'
         name='lastName'
@@ -73,10 +75,12 @@ navigate("/dashboard")
         value={formdata.lasttName}
         />
       </label>
+      </div>
 
       <label>
-        <p>Email Adress <sup>*</sup></p>
+        <p className=' mt-4 text-[0.875rem] text-white mb-1 leading-[1.375rem] '>Email Address <sup className='text-pink-700'>*</sup></p>
         <input
+         className= ' border-gray-600  bg-slate-500 rounded-[0.5rem] text-yellow-50 w-full p-[12px]   '
         required
         type='email'
         name='email'
@@ -86,10 +90,11 @@ navigate("/dashboard")
         />
       </label>
     
-      <div>
-      <label>
-        <p>Create Password <sup>*</sup></p>
+      <div className=' flex gap-x-4 mt-4'>
+      <label className=' w-full relative'>
+        <p className=' text-[0.875rem] text-white mb-1 leading-[1.375rem] '>Create Password <sup className='text-pink-700'>*</sup></p>
         <input
+         className= ' border-gray-600  bg-slate-500 rounded-[0.5rem] text-yellow-50 w-full p-[12px]   '
         required
         type={showPassword ? ("text"): ("password")}
         name='password'
@@ -98,14 +103,17 @@ navigate("/dashboard")
         value={formdata.password}
         />
 
-<span onClick={()=> setshowPassword((prev)=> !prev)}>
-        {showPassword ?(<AiOutlineEyeInvisible />):(<AiOutlineEye />)}
+<span 
+className=' absolute  right-3 top-[38px] cursor-pointer '
+onClick={()=> setshowPassword((prev)=> !prev)}>
+        {showPassword ?(<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF' />):(<AiOutlineEye fontSize={24} fill='#AFB2BF' />)}
       </span>
       </label>
 
-      <label>
-        <p>Confirm Password <sup>*</sup></p>
+      <label className=' w-full relative' >
+        <p className=' text-[0.875rem] text-white mb-1 leading-[1.375rem] '>Confirm Password <sup className='text-pink-700'>*</sup></p>
         <input
+         className= ' border-gray-600  bg-slate-500 rounded-[0.5rem] text-yellow-50 w-full p-[12px]   '
         required
         type={showPassword ? ("text"): ("password")}
         name='confirmpassword'
@@ -114,13 +122,15 @@ navigate("/dashboard")
         value={formdata.confirmpassword}
         />
 
-<span onClick={()=> setshowPassword((prev)=> !prev)}>
-        {showPassword ?(<AiOutlineEyeInvisible />):(<AiOutlineEye />)}
+<span 
+className=' absolute  right-3 top-[38px] cursor-pointer '
+onClick={()=> setshowPassword((prev)=> !prev)}>
+        {showPassword ?(<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF' />):(<AiOutlineEye fontSize={24} fill='#AFB2BF' />)}
       </span>
       </label>
       </div>
 
-      <button>
+      <button className='  w-full bg-yellow-300 rounded-[8px] font-medium text-black px-[12px] py-[8px] mt-6' >
         Create Account
       </button>
 
