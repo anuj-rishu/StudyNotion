@@ -5,7 +5,7 @@ import {  toast } from 'react-toastify';
 
 const Navbar = (props) => {
     let isLoggedIn =props.isLoggedIn;
-    let setLoggedIn =props.setLoggedIn;
+    let setLoggedIn =props.setLoggedIn
 
   return (
     <div className='flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto '>
