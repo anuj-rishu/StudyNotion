@@ -49,7 +49,7 @@ const Loginform = ({setIsLoggedIn }) => {
     className= ' border-gray-600  bg-slate-500 rounded-[0.5rem] text-yellow-50 w-full p-[12px]   '
     required
     type={showPassword ? ("text") : ("password")}
-     name=" password"
+     name="password"
       
       value={formData.password}
       onChange={changeHandler}

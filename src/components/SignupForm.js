@@ -13,6 +13,7 @@ const SignupForm = ({setIsLoggedIn}) => {
     confirmpassword:""
   })
   const [showPassword , setshowPassword]=  useState(false)
+  const [accountType, setAccountType] = useState("student")
   function changeHandler(event){
     setFormData ((prevData)=>({
       ...prevData,
@@ -40,10 +41,16 @@ navigate("/dashboard")
  <div>
 
   <div className='flex bg-slate-800 p-1 gap-x-1 my-6 rounded-full max-w-max '>
-  <button className=''>
+  <button onClick={()=> setAccountType("student")} className={`${accountType==="student"
+  ?
+  "bg-black text-white"
+  :"bg-transparent text-yellow-50"} py-2 px-5 rounded-full transition-all duration-200 `}>
       Student
     </button >
-    <button className=''>
+    <button onClick={()=> setAccountType("instructor")} className={`${accountType==="instructor"
+  ?
+  "bg-black text-white"
+  :"bg-transparent text-yellow-50"} py-2 px-5 rounded-full transition-all duration-200 `}>
       Instructor
     </button>
   </div>
